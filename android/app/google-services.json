@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "331291796860",
+    "project_id": "resq-club-cat-app",
+    "storage_bucket": "resq-club-cat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331291796860:android:81eb4f8a4bdfc4b9f5b0f9",
+        "android_client_info": {
+          "package_name": "com.resqclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331291796860-nj9mqcg99se9eo5n9a88eob3cfvpe3vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNy-qJhcElosCcQAIgtLjjaXOwMgHVbRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331291796860-nj9mqcg99se9eo5n9a88eob3cfvpe3vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
