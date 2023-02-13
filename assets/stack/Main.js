@@ -5,13 +5,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import History from '../screens/History';
 
-
+//Home Screen
 function HomeScreen() {
     return(
         <Home/>
     )
 }
-
+//Preferences Screen
 function HistoryScreen() {
     return(
         <History/>
