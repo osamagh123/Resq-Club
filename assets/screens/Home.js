@@ -4,9 +4,13 @@ import DeviceInfo from 'react-native-device-info';
 import { getUniqueId, getManufacturer } from 'react-native-device-info';
 import firestore from '@react-native-firebase/firestore';
 import { useNavigation } from '@react-navigation/core';
-import { Button, Text, View, } from 'native-base';
+import { Button, Center, HStack, Text, View, } from 'native-base';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Carousel from 'react-native-reanimated-carousel';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-regular-svg-icons'
+import { faGear, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Home() {
   const array1 = Array.from({ length: 16 }, (_, i) => i + 1);
@@ -114,8 +118,12 @@ const renderItem = ({item}) => {
         source={{uri: 'https://placekitten.com/200/200?image=' + item}}
         style={{width: windowWidth, height: windowWidth, marginBottom: 10}}
       />
-      <Button onPress={onPressHandler}>Not Cute Enough</Button>
-      {showUndo && <Button bgColor='red.600' mt='5' onPress={undoHandler}>Undo</Button>}
+      <Center>
+        <HStack>
+          <Button w='50' h='50' onPress={onPressHandler}><FontAwesomeIcon size={16} style={{color: 'white'}} icon={faThumbsDown}/></Button>
+          {showUndo && <Button bgColor='red.600' ml='3' onPress={undoHandler}>Undo</Button>}
+        </HStack>
+      </Center>
     </View>
   );
 };
@@ -125,7 +133,7 @@ const renderItem = ({item}) => {
     <SafeAreaView>
       <View>
         <View p='2' alignItems='flex-end'>
-          <Button onPress={() => {navigation.navigate('History')}} bgColor='transparent' borderColor='black' borderWidth='1' w='140'><Text color='black'>Preferences</Text></Button>
+          <Button onPress={() => {navigation.navigate('History')}} bgColor='transparent' borderColor='black' borderWidth='1' h='50' w='50'><Text color='black'><FontAwesomeIcon size={18} style={{color: '#31373E'}} icon={faGear}/></Text></Button>
         </View>
         <View>
             <GestureHandlerRootView>
